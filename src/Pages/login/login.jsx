@@ -102,6 +102,7 @@ class Login extends Component {
                                             validator:this.validatePwd
                                         }
                                     ],
+                                    // initialValue:'admin' //指定初始值
                                 })
                                 (
                                     <Input
@@ -133,6 +134,10 @@ class Login extends Component {
  * 
  */
 // export default Login
+/**
+ * 包装一个组件生成一个新的组件:Form(Login)
+ * 新组件会向Form组件传递一个强大的对象属性：form
+ */
 const WrapLogin=Form.create()(Login)
 export default WrapLogin
 /*
