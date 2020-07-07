@@ -2,12 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import storageUtils from './utils/storageUtils'
+import memoryUtils from './utils/memoryUtils'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+//读取local中的user，保存到内存中
+const user=storageUtils.getUser()
+memoryUtils.user=user;
+
+//将App组件标签渲染到index页面的div上
+ReactDOM.render(<App />,document.getElementById('root')
 );
 
 
+ 
