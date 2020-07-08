@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './login.less'
-import logo from './images/logo.jpg'
+import logo from '../../assets/images/logo.jpg'
 import { Form, Icon, Input, Button,message} from 'antd';
 import {reqLogin} from '../../api'
 import memoryUtils from '../../utils/memoryUtils'
